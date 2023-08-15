@@ -1,9 +1,13 @@
 // ================================= GENERAL =================================
 
+$font-family: 'Courier New', Courier, monospace;
+$primary-bg-color: rgb(107, 180, 107);
+$primary-text-color: brown;
+
 body{
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(107, 180, 107);
-    color: brown;
+    font-family: $font-family;
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
 }
 
 .container{
@@ -41,13 +45,12 @@ body{
     cursor: pointer;
     border: none;
     color: brown;
-}
 
-.tab-button:hover{
-    background-color: rgb(90, 150, 90);
-    transform: translateY(-5px);
+    &:hover {
+        background-color: darken(rgb(81, 148, 81), 10%);
+        transform: translateY(-5px);
+    }
 }
-
 
 // ================================= TEAMS CONTAINER =================================
 
@@ -67,4 +70,11 @@ img{
 .which-league-selected-message{
     padding: 20px;
     font-weight: bold;
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
